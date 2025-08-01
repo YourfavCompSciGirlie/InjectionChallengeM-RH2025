@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 To-Do List</h1>
+        </header>
+        
+        <main>
+            <!-- Add Task Form -->
+            <form id="add-task-form" class="add-task-form">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    placeholder="What needs to be done?" 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="add-btn">Add Task</button>
+            </form>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Task List -->
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be dynamically generated here -->
+            </ul>
+
+            <!-- Task Count -->
+            <div id="task-count" class="task-count">
+                <span id="count-text">0 tasks remaining</span>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
